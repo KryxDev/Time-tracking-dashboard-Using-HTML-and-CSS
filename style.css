@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.row {
+  width: 100%;
+  height: 100%;
+  background: hsl(226, 43%, 10%);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  padding: 10px;
+  grid-gap: 20px;
+}
+.col-1 {
+  width: 240px;
+  height: 450px;
+  background: hsl(235, 46%, 20%);
+  border-radius: 20px;
+}
+.info {
+  width: 100%;
+  height: 320px;
+  border-radius: 20px;
+  background: hsl(246, 80%, 60%);
+  position: relative;
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+}
+.info p {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  color: hsl(236, 100%, 87%);
+}
+.info h1 {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+#profile-img {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.schedule {
+  width: 100%;
+  height: 130px;
+  border-radius: 0 0 20px 20px;
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-left: 10%;
+  flex-direction: column;
+}
+.schedule p:hover {
+  cursor: pointer;
+}
+.schedule p:last-child {
+  color: hsl(236, 100%, 87%);
+}
+/* Col-2 */
+.col-2 , .col-3 , .col-4 {
+  width: 240px;
+  height: 450px;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  flex-direction: column;
+}
+.row-1 , .row-2{
+    width: 100%;
+    height: 215px;
+    border-radius:20px;
+    position: relative;
+    overflow: hidden;
+}
+.row-1{
+    background:hsl(15, 100%, 70%);
+}
+.row-1 svg{
+    position: absolute;
+    right: 10%;
+    top: -5%;
+}
+.details{
+    width: 100%;
+    height: 168px;
+    background:hsl(235, 45%, 61%);
+    position: absolute;
+    bottom: 0;
+    border-radius:20px;
+    font-family: "Rubik", sans-serif;
+    color:#fff;
+}
+.details p:first-child{
+    font-size: 18px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-weight: bolder;
+}
+.details h1{
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    letter-spacing: 2px;
+}
+.details p:last-child{
+    position: absolute;
+    bottom:15%;
+    left: 10%;
+    color: hsl(236, 100%, 87%);
+    font-weight: bold;
+}
+.row-2{
+    background:hsl(145, 58%, 55%);
+}
+.row-2 svg{
+    position: absolute;
+}
+.dots{
+    width: 5px;
+    height: 5px;
+    background:hsl(236, 100%, 87%);
+    border-radius:50%;
+    position: absolute;
+    right: 10%;
+    top: 15%;
+}
+.dots::after , .dots::before{
+    content: "";
+    width: 5px;
+    height: 5px;
+    background: hsl(236, 100%, 87%);
+    position: absolute;
+    border-radius:50%;
+}
+.dots::before{
+    right: 10px;
+}
+.dots::after{
+    left: 10px;
+}
+
+/* row-2 */
+.row-2 svg{
+    position: absolute;
+    right: 10%;
+}
+.row-2 .details{
+    background:hsl(235, 46%, 20%);
+}
+
+/* col-3 */
+.col-3 .row-1{
+    background:hsl(195, 74%, 62%);
+}
+.col-3 .row-2{
+    background:hsl(264, 64%, 52%);
+}
+/* col-4 */
+.col-4 .row-1{
+    background:hsl(348, 100%, 68%);
+}
+.col-4 .row-2 svg{
+    top: -4%;
+}
+.col-4 .row-2{
+    background:hsl(43, 84%, 65%);
+}
+
+
+/* reponsive Mobile */
+@media  only screen and (max-width:1145px) {
+    main{
+        height: 100%;
+    }
+    .row{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto auto;
+    }
+}
+@media  only screen and (max-width:584px) {
+    main{
+        height: 100%;
+    }
+    .col-1{
+        height: 220px;
+    }
+    .col-2 , .col-3 , .col-4{
+        height: 380px;
+        justify-content: space-between;
+    }
+    #profile-img{
+        top: 25%;
+        width: 80px;
+        height: 80px;
+    }
+    .info p{
+        top: 30%;
+        left: 35%;
+    }
+    .info h1{
+        top: 45%;
+        left: 35%;
+    }
+    .info{
+        height: 160px;
+    }
+    .schedule{
+        height:60px;
+        justify-content: space-evenly;
+        margin: 0;
+        align-items:center;
+        flex-direction: row;
+    }
+    .row{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto auto auto auto;
+    }
+    .col-1 , .col-2 , .col-3 , .col-4{
+        width: 100%;
+    }
+
+    .row-1 , .row-2{
+        height: 180px;
+    }
+    .details{
+        height: 140px;
+        background:hsl(235, 46%, 20%);
+    }
+    .details h1{
+        top: 45%;
+    }
+    .row-1 p:first-child , .row-2 p:first-child{
+        top: 20%;
+    }
+    .row-1 p:last-child , .row-2 p:last-child{
+        top: 45%;
+        left: 60%;
+    }
+    .dots{
+        top: 30%;
+    }
+
+}
